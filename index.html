@@ -203,24 +203,6 @@
       margin-right: 8px;
     }
     
-    /* Secondary Button */
-    .secondary-button {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: all 0.3s;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    
-    .secondary-button:hover {
-      background-color: white;
-      color: var(--primary);
-    }
-    
     /* CTA Section */
     .cta-section {
       padding: 80px 0;
@@ -238,6 +220,62 @@
       max-width: 700px;
       margin: 0 auto 30px;
       font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    
+    /* Updated Button Styles for CTA Section */
+    .cta-section .cta-button,
+    .cta-section .secondary-button {
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .cta-section .cta-button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+    }
+    
+    .cta-section .cta-button:hover {
+      background-color: var(--primary-light);
+    }
+    
+    .cta-section .secondary-button {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .cta-section .secondary-button:hover {
+      background-color: white;
+      color: var(--primary);
+    }
+    
+    /* Secondary Button (general) */
+    .secondary-button {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .secondary-button:hover {
+      background-color: white;
+      color: var(--primary);
     }
     
     /* Contact Modal Styles */
@@ -403,6 +441,17 @@
       .logo {
         font-size: 16px;
       }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-section .cta-button,
+      .cta-section .secondary-button {
+        width: 100%;
+        max-width: 250px;
+      }
     }
   </style>
 </head>
@@ -450,7 +499,7 @@
     <div class="container">
       <h2>Ready to Begin Your Search?</h2>
       <p>The best homes don't wait—and neither should you. Orion is here to accelerate your journey, answer your questions, and guide you with clarity. No pressure. Just precision, insight, and honest help.</p>
-      <div class="hero-buttons">
+      <div class="cta-buttons">
         <button id="call-now-btn" class="cta-button"><i class="fas fa-phone"></i> Call Now</button>
         <button id="email-me-btn" class="secondary-button"><i class="fas fa-envelope"></i> Email Me</button>
       </div>
